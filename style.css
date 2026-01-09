@@ -649,11 +649,11 @@ h3 {
 }
 
 .detail-image img {
-  width: 100%;          /* Ocupa el 100% del ancho de su contenedor padre (.detail-image) */
-  max-width: 450px;     /* Límite máximo para que no sea gigante, ajústalo si quieres más grande (ej. 500px o 600px) */
-  height: auto;         /* Mantiene la proporción */
-  object-fit: cover;    /* Cubre el espacio sin deformarse */
-  border-radius: 8px;   /* Opcional: Bordes un poco redondeados si te gusta */
+  width: 100%; /* Ocupa el 100% del ancho de su contenedor padre (.detail-image) */
+  max-width: 450px; /* Límite máximo para que no sea gigante, ajústalo si quieres más grande (ej. 500px o 600px) */
+  height: auto; /* Mantiene la proporción */
+  object-fit: cover; /* Cubre el espacio sin deformarse */
+  border-radius: 8px; /* Opcional: Bordes un poco redondeados si te gusta */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante para destacar sobre fondo oscuro */
 }
 
