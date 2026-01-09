@@ -309,8 +309,8 @@ h3 {
   opacity: 0.8;
 }
 
-.location-list h3 {
-  text-align: right;
+.location-list h2 {
+  text-align: center;
   margin-bottom: 1.5rem;
 }
 .location-list ul {
@@ -318,8 +318,7 @@ h3 {
 }
 .location-list li {
   margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
   padding-bottom: 0.5rem;
 }
 
@@ -538,6 +537,7 @@ h3 {
 .col-contact {
   text-align: center;
 }
+
 .col-contact h4,
 .col-legal h4 {
   font-weight: 600;
@@ -626,6 +626,7 @@ h3 {
   font-weight: 700;
   font-size: 1rem;
   transition: background 0.3s;
+  text-decoration: none; /* Asegura que no tenga subrayado */
 }
 
 .btn-back:hover {
@@ -643,28 +644,35 @@ h3 {
 /* Columna Imagen */
 .detail-image {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centra la imagen en su columna */
+  width: 100%; /* Asegura que ocupe el ancho disponible */
 }
 
 .detail-image img {
-  max-width: 100%;
-  height: auto;
-  max-height: 550px; /* Tamaño grande controlado */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+  width: 100%;          /* Ocupa el 100% del ancho de su contenedor padre (.detail-image) */
+  max-width: 450px;     /* Límite máximo para que no sea gigante, ajústalo si quieres más grande (ej. 500px o 600px) */
+  height: auto;         /* Mantiene la proporción */
+  object-fit: cover;    /* Cubre el espacio sin deformarse */
+  border-radius: 8px;   /* Opcional: Bordes un poco redondeados si te gusta */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante para destacar sobre fondo oscuro */
 }
 
 /* Columna Texto */
 .detail-info {
-  text-align: center; /* Centrado como en la imagen */
+  text-align: right; /* CAMBIO: En la imagen de referencia el texto parece alineado a la DERECHA o CENTRO, aquí lo pongo alineado al centro según tu diseño anterior, pero verifica */
+  text-align: center; /* Mantenemos centrado por consistencia con tu petición anterior */
   color: var(--neutrals-50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .detail-title {
   font-family: var(--h1-font); /* Roboto Bold */
   font-weight: 800;
-  font-size: 4rem; /* Tamaño muy grande */
+  font-size: 3.5rem; /* Tamaño grande para el título */
   line-height: 1.1;
-  margin-bottom: 4rem; /* Separación con el texto */
+  margin-bottom: 2rem; /* Separación con el texto */
   color: #ffffff;
 }
 
@@ -675,18 +683,4 @@ h3 {
   max-width: 600px; /* Para que el texto no se estire demasiado */
   margin: 0 auto; /* Centrar el bloque de texto */
   font-weight: 500;
-}
-
-/* Responsive para móvil */
-@media (max-width: 900px) {
-  .product-detail-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .detail-title {
-    font-size: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
 }
