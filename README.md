@@ -6,6 +6,12 @@
 
 ---
 
+## ¿Cómo se ha realizado?
+
+Para la realización de esta práctica, he utilizando la inteligencia artifical de Gemini para generar el contenido de estos archivos excepto el README, los cuales han sido revisados y editados por mí para asegurar su calidad y adecuación a los requisitos de la práctica.
+
+Para la ejecución del proyecto, el prompt que se le pasó a la inteligencia artificial se resume en enviarle el enunciado de la práctica principalmente, junto con algunas instrucciones que debía seguir como basarse 100% en el diseño que se proporcionaban en las imagenes de Figma, usar HTML y CSS, no crear el diseño responsive, utilizar lenguaje claro y sencillo y dividir el proyecto en varios archivos para cada vista. Le dije que empezariamos creando el index, y ya de ahí, seguiríamos avanzando poco a poco.
+
 ## 1. Objetivo
 
 El objetivo principal de esta práctica ha sido la implementación de la interfaz de usuario para la librería "MyBookShop", basándome en los mockups de diseño creados anteriormente en Figma.
@@ -58,6 +64,7 @@ La página principal se dividió en tres secciones:
 1.  **¿Quiénes somos?:** Es un Grid de 2 columnas que equilibran la imagen de la librería y el texto descriptivo sobre el fondo oscuro.
 2.  **Nuestros Productos:** Añadí carrusel horizontal. Utilicé un contenedor con `display: flex` y `overflow-x: auto` para permitir el desplazamiento, ocultando la barra de scroll para una mejor estética. Añadí un pequeño script de JavaScript para controlar el desplazamiento mediante los botones de flecha.
 3.  **Encuéntranos:** Repliqué la estructura de la primera sección para mostrar el mapa y la lista de tiendas físicas.
+    También se han añadido enlaces reales a localizaciones de Google Maps que te redireccionan directamente a la ubicación de las tiendas.
 
 !["Imagen del index.html"](public/13.png)
 
