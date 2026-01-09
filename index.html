@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBookShop - Inicio</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container header-container">
+        <div class="logo">
+          <h1>MyBookShop</h1>
+        </div>
+
+        <nav class="main-nav">
+          <form action="#" class="search-form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar..." name="search" />
+          </form>
+
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Tu Librería</a></li>
+            <li><a href="tienda.html">Compra On-line</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-about">
+        <div class="container">
+          <h2 class="section-title">¿Quiénes somos?</h2>
+
+          <div class="about-content">
+            <article class="about-image">
+              <img src="public/1.png" alt="Librería interior" />
+            </article>
+
+            <article class="about-text">
+              <p>
+                En nuestra librería creemos que las grandes historias nunca
+                pasan de moda. Por eso, nos especializamos en libros clásicos de
+                la literatura universal, aquellos que han marcado generaciones y
+                siguen inspirando a lectores de todas las edades.
+              </p>
+              <p>
+                Desde las obras inmortales de Cervantes, Austen o Tolstói, hasta
+                las páginas inolvidables de Dickens o García Márquez, aquí
+                encontrarás una cuidada selección de títulos que celebran el
+                arte de la palabra y el valor del tiempo.
+              </p>
+              <p>
+                Ven a redescubrir los clásicos, porque cada lectura es un viaje
+                al alma de la historia.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-products">
+        <div class="container">
+          <h2 class="section-title">Nuestros Productos</h2>
+          <p class="section-subtitle">
+            Vendemos una cuidada selección de libros clásicos, obras que han
+            marcado la historia.
+          </p>
+
+          <div class="products-carousel-wrapper">
+            <button class="scroll-btn left" id="scrollLeft">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="products-grid" id="productsContainer">
+              <article class="product-card-index">
+                <div class="card-top">
+                  <h3>Francofacts</h3>
+                </div>
+                <div class="card-center">
+                  <img src="public/6.png" alt="Francofacts" />
+                </div>
+                <div class="card-bottom">
+                  <p class="price">16.15€</p>
+                </div>
+              </article>
+
+              <article class="product-card-index">
+                <div class="card-top">
+                  <h3>El Viaje de Mi Padre</h3>
+                </div>
+                <div class="card-center">
+                  <img src="public/4.png" alt="El Viaje" />
+                </div>
+                <div class="card-bottom">
+                  <p class="price">19.85€</p>
+                </div>
+              </article>
+
+              <article class="product-card-index">
+                <div class="card-top">
+                  <h3>Mi Lucha</h3>
+                </div>
+                <div class="card-center">
+                  <img src="public/3.png" alt="Mi Lucha" />
+                </div>
+                <div class="card-bottom">
+                  <p class="price">22.70€</p>
+                </div>
+              </article>
+
+              <article class="product-card-index">
+                <div class="card-top">
+                  <h3>Lepanto</h3>
+                </div>
+                <div class="card-center">
+                  <img src="public/5.png" alt="Lepanto" />
+                </div>
+                <div class="card-bottom">
+                  <p class="price">15.50€</p>
+                </div>
+              </article>
+              <article class="product-card-index">
+                <div class="card-top">
+                  <h3>Verdugos del 36</h3>
+                </div>
+                <div class="card-center">
+                  <img src="public/9.png" alt="Verdugos del 36" />
+                </div>
+                <div class="card-bottom">
+                  <p class="price">16.50€</p>
+                </div>
+              </article>
+            </div>
+
+            <button class="scroll-btn right" id="scrollRight">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-location">
+        <div class="container">
+          <h2 class="section-title">Encuéntranos</h2>
+
+          <div class="location-content">
+            <article class="location-map">
+              <img src="public/2.png" alt="Mapa" />
+            </article>
+
+            <article class="location-list">
+              <h3>Nuestras tiendas</h3>
+              <ul>
+                <li><strong>Calle de Alcalá</strong> — Madrid</li>
+                <li><strong>La Rambla</strong> — Barcelona</li>
+                <li><strong>Constitución</strong> — Sevilla</li>
+                <li><strong>Gran Vía</strong> — Bilbao</li>
+                <li><strong>Calle Larios</strong> — Málaga</li>
+                <li><strong>Calle Uría</strong> — Oviedo</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-col col-logo">
+          <i class="fa-solid fa-book-open footer-icon-large"></i>
+        </div>
+
+        <div class="footer-col col-contact">
+          <h4>CONTÁCTANOS</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col col-legal">
+          <h4>MÁS SOBRE NOSOTROS</h4>
+          <ul>
+            <li><a href="#">Políticas de Privacidad y Datos</a></li>
+            <li><a href="#">Nuestros Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+          <p class="copyright">© Todos los derechos reservados Sergio, 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const container = document.getElementById("productsContainer");
+      const btnLeft = document.getElementById("scrollLeft");
+      const btnRight = document.getElementById("scrollRight");
+
+      if (container && btnLeft && btnRight) {
+        btnRight.addEventListener("click", () => {
+          container.scrollBy({ left: 300, behavior: "smooth" });
+        });
+        btnLeft.addEventListener("click", () => {
+          container.scrollBy({ left: -300, behavior: "smooth" });
+        });
+      }
+    </script>
+  </body>
+</html>

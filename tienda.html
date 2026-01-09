@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda - MyBookShop</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container header-container">
+        <div class="logo">
+          <h1>MyBookShop</h1>
+        </div>
+
+        <nav class="main-nav">
+          <form action="#" class="search-form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar..." name="search" />
+          </form>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Tu Librería</a></li>
+            <li><a href="tienda.html" class="active">Compra On-line</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+      </div>
+    </header>
+
+    <main class="shop-section">
+      <div class="container shop-layout">
+        <aside class="filters-sidebar">
+          <h2 class="filters-title">Filtros</h2>
+          <ul class="filter-list">
+            <li class="filter-item active">
+              <span class="checkbox"><i class="fa-solid fa-square"></i></span>
+              <span class="filter-text">Todos Los Productos</span>
+            </li>
+            <li class="filter-item">
+              <span class="checkbox"><i class="fa-regular fa-square"></i></span>
+              <span class="filter-text">Ofertas</span>
+            </li>
+            <li class="filter-item">
+              <span class="checkbox"><i class="fa-regular fa-square"></i></span>
+              <span class="filter-text">Tazas</span>
+            </li>
+            <li class="filter-item">
+              <span class="checkbox"><i class="fa-regular fa-square"></i></span>
+              <span class="filter-text">Bolsas</span>
+            </li>
+            <li class="filter-item">
+              <span class="checkbox"><i class="fa-regular fa-square"></i></span>
+              <span class="filter-text">Otros</span>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="products-grid-shop">
+          <article class="shop-card">
+            <div class="card-image-wrapper">
+              <img
+                src="public/7.png"
+                alt="Libro Juan Carlos I"
+              />
+            </div>
+            <div class="card-content-top">
+              <h3>Juan Carlos I</h3>
+              <p class="desc">
+                Juan Carlos I y su papel en la reconciliación de España.
+              </p>
+            </div>
+            <div class="card-content-bottom">
+              <p class="price">23.65€</p>
+              <div class="card-buttons">
+                <button class="btn-shop add">Añadir al carrito</button>
+                <a
+                  href="vista.html"
+                  class="btn-shop view"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                  "
+                  >Ver Más</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="card-image-wrapper">
+              <img
+                src="public/8.png"
+                alt="Taza Quijote"
+              />
+            </div>
+            <div class="card-content-top">
+              <h3>Taza del Quijote</h3>
+              <p class="desc">Taza básica de Don Quijote</p>
+            </div>
+            <div class="card-content-bottom">
+              <p class="price">4.99€</p>
+              <div class="card-buttons">
+                <button class="btn-shop add">Añadir al carrito</button>
+                <a
+                  href="vista.html"
+                  class="btn-shop view"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                  "
+                  >Ver Más</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="card-image-wrapper">
+              <img
+                src="public/4.png"
+                alt="El Viaje De Mi Padre"
+              />
+            </div>
+            <div class="card-content-top">
+              <h3>El Viaje De Mi Padre</h3>
+              <p class="desc">
+                Memorias del padre del autor y su vida marcada por aventuras.
+              </p>
+            </div>
+            <div class="card-content-bottom">
+              <p class="price">19.85€</p>
+              <div class="card-buttons">
+                <button class="btn-shop add">Añadir al carrito</button>
+                <a
+                  href="vista.html"
+                  class="btn-shop view"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                  "
+                  >Ver Más</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="card-image-wrapper">
+              <img
+                src="public/3.png"
+                alt="Portada Libro Histórico"
+              />
+            </div>
+            <div class="card-content-top">
+              <h3>Mi Lucha</h3>
+              <p class="desc">
+                Autobiografía de Hitler y exposición de ideas políticas.
+              </p>
+            </div>
+            <div class="card-content-bottom">
+              <p class="price">16.15€</p>
+              <div class="card-buttons">
+                <button class="btn-shop add">Añadir al carrito</button>
+                <a
+                  href="vista.html"
+                  class="btn-shop view"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                  "
+                  >Ver Más</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card">
+            <div class="card-image-wrapper">
+              <img
+                src="public/6.png"
+                alt="Libro Francofacts"
+              />
+            </div>
+            <div class="card-content-top">
+              <h3>Francofacts</h3>
+              <p class="desc">Humor y datos sobre bulos del pasado.</p>
+            </div>
+            <div class="card-content-bottom">
+              <p class="price">18.50€</p>
+              <div class="card-buttons">
+                <button class="btn-shop add">Añadir al carrito</button>
+                <a
+                  href="vista.html"
+                  class="btn-shop view"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                  "
+                  >Ver Más</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card ribbon-container">
+            <div class="ribbon"><span>Oferta</span></div>
+
+            <div class="card-image-wrapper">
+              <img
+                src="public/9.png"
+                alt="Libro Verdugos"
+              />
+            </div>
+            <div class="card-content-top">
+              <h3>Verdugos Del 36</h3>
+              <p class="desc">
+                Relato sobre los responsables de la violencia durante la Guerra
+                Civil.
+              </p>
+            </div>
+            <div class="card-content-bottom">
+              <p class="price">20.90€</p>
+              <div class="card-buttons">
+                <button class="btn-shop add">Añadir al carrito</button>
+                <a
+                  href="vista.html"
+                  class="btn-shop view"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                  "
+                  >Ver Más</a
+                >
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-col col-logo">
+          <i class="fa-solid fa-book-open footer-icon-large"></i>
+        </div>
+
+        <div class="footer-col col-contact">
+          <h4>CONTÁCTANOS</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col col-legal">
+          <h4>MÁS SOBRE NOSOTROS</h4>
+          <ul>
+            <li><a href="#">Políticas de Privacidad y Datos</a></li>
+            <li><a href="#">Nuestros Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+          <p class="copyright">© Todos los derechos reservados Sergio, 2025</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

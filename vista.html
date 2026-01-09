@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista Producto - MyBookShop</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container header-container">
+        <div class="logo">
+          <h1>MyBookShop</h1>
+        </div>
+
+        <nav class="main-nav">
+          <form action="#" class="search-form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar..." name="search" />
+          </form>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Tu Librería</a></li>
+            <li><a href="tienda.html" class="active">Compra On-line</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+      </div>
+    </header>
+
+    <main class="view-section">
+      <div class="container">
+        <div class="back-button-container">
+          <a href="tienda.html" class="btn-back">Volver</a>
+        </div>
+
+        <div class="product-detail-grid">
+          <div class="detail-image">
+            <img
+              src="https://m.media-amazon.com/images/I/81+y+M+g1KL._AC_UF894,1000_QL80_.jpg"
+              alt="Portada Juan Carlos I"
+            />
+          </div>
+
+          <div class="detail-info">
+            <h1 class="detail-title">Juan Carlos I.<br />Reconciliación</h1>
+
+            <p class="detail-description">
+              “Juan Carlos I. Reconciliación” es una obra de memorias en la que
+              el rey emérito repasa su vida, su papel en la Transición y los
+              episodios clave de su reinado, reflexionando también sobre sus
+              aciertos, errores y su legado histórico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-col col-logo">
+          <i class="fa-solid fa-book-open footer-icon-large"></i>
+        </div>
+
+        <div class="footer-col col-contact">
+          <h4>CONTÁCTANOS</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col col-legal">
+          <h4>MÁS SOBRE NOSOTROS</h4>
+          <ul>
+            <li><a href="#">Políticas de Privacidad y Datos</a></li>
+            <li><a href="#">Nuestros Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+          <p class="copyright">© Todos los derechos reservados Sergio, 2025</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

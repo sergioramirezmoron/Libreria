@@ -1,0 +1,692 @@
+/* =========================================
+   1. VARIABLES FIGMA Y RESET
+   ========================================= */
+:root {
+  /* --- COLORES --- */
+  --primary-900: #282203;
+  --primary-800: #504405; /* Oliva Header/Footer */
+  --primary-500: #c7aa0d; /* Dorado Tarjetas */
+  --primary-300: #f3d845; /* Dorado Hover Links */
+
+  --secondary-900: #0a1215; /* Fondo Negro General */
+  --secondary-800: #142529;
+  --secondary-700: #1f373e; /* Azul Nav Cápsula */
+  --secondary-600: #294a52; /* Azul Botones/Precio */
+  --secondary-500: #335c67; /* Azul Hover Botones */
+
+  --neutrals-50: #f9f8f7; /* Blanco Texto */
+  --neutrals-200: #ebebe8; /* Gris Claro Texto Secundario */
+  --neutrals-400: #deded9; /* Gris Input */
+
+  /* --- FUENTES --- */
+  --h1-font: "Roboto", sans-serif;
+  --body-font: "Inter", sans-serif;
+
+  --container-width: 1240px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--secondary-900);
+  color: var(--neutrals-50);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Tipografía Básica */
+h1 {
+  font-family: var(--h1-font);
+  font-weight: 800;
+}
+h2 {
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 48px;
+}
+h3 {
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* Títulos de Sección */
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  color: var(--neutrals-50);
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  opacity: 0.9;
+}
+
+/* =========================================
+   2. CABECERA (HEADER)
+   ========================================= */
+.main-header {
+  background-color: var(--primary-800);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-family: var(--body-font);
+  font-size: 28px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+/* Nav Cápsula */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-700);
+  border-radius: 50px;
+  padding: 12px 40px;
+  flex-grow: 1;
+  margin: 0 40px;
+  max-width: 900px;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 8px 15px 8px 35px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: var(--neutrals-400);
+  font-family: var(--body-font);
+  font-size: 15px;
+  color: var(--secondary-900);
+}
+
+.search-form i {
+  position: absolute;
+  left: 10px;
+  color: var(--secondary-900);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-300);
+}
+
+.header-icon {
+  font-size: 3rem;
+  color: var(--primary-500);
+  margin-left: 1rem;
+}
+
+/* =========================================
+   3. PÁGINA INICIO (INDEX)
+   ========================================= */
+
+/* Sección Quiénes Somos */
+.section-about {
+  padding: 4rem 0;
+  background-color: var(--secondary-900);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+  height: 55vh;
+}
+
+.about-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Sección Productos (Carrusel Index) */
+.section-products {
+  background-color: var(--primary-800);
+  padding: 4rem 0;
+}
+
+.products-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.scroll-btn {
+  background: transparent;
+  border: none;
+  color: var(--neutrals-50);
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+}
+.scroll-btn.left {
+  left: 0;
+}
+.scroll-btn.right {
+  right: 0;
+}
+
+.products-grid {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Ocultar scrollbar Firefox */
+}
+.products-grid::-webkit-scrollbar {
+  display: none; /* Ocultar scrollbar Chrome */
+}
+
+/* Tarjeta Index (Diseño Simple) */
+.product-card-index {
+  background-color: var(--primary-500);
+  border-radius: 20px;
+  min-width: 250px; /* Ancho fijo mínimo */
+  width: 250px;
+  padding: 1rem;
+  color: var(--secondary-900);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Evita que se encojan en flex */
+}
+
+.product-card-index .card-top h3 {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card-index .card-center img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-card-index .card-bottom .price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Sección Encuéntranos */
+.section-location {
+  background-color: var(--secondary-900);
+  padding: 4rem 0;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.location-map img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+.location-list h3 {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+.location-list ul {
+  text-align: right;
+}
+.location-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+/* =========================================
+   4. PÁGINA TIENDA (SHOP)
+   ========================================= */
+.shop-section {
+  padding: 3rem 0;
+  background-color: var(--secondary-900);
+  min-height: 80vh;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Filtros Sidebar */
+.filters-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.06rem;
+}
+
+.filter-item {
+  background-color: var(--primary-500);
+  padding: 12px 15px;
+  border: 1px solid var(--secondary-900);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--neutrals-50);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+.filter-item:hover {
+  transform: translateX(5px);
+}
+.filter-item .checkbox i {
+  font-size: 1.1rem;
+  color: var(--secondary-900);
+  margin-top: 2px;
+}
+
+/* --- REJILLA Y TARJETAS TIENDA (CORREGIDAS) --- */
+.products-grid-shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Tarjeta Tienda (314x386px) */
+.shop-card {
+  width: 314px;
+  height: 386px;
+  background-color: var(--primary-500);
+  border-radius: 30px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+/* Imagen */
+.card-image-wrapper {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+.card-image-wrapper img {
+  height: 100%;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido Superior (Título y Descripción) */
+.card-content-top {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-content-top h3 {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--secondary-900);
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.card-content-top .desc {
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  color: var(--secondary-800); /* Gris oscuro */
+  text-align: center;
+  line-height: 1.4;
+  padding: 0 5px;
+}
+
+/* Contenido Inferior (Precio y Botones) */
+.card-content-bottom {
+  width: 100%;
+  margin-top: auto; /* Empuja hacia el fondo de la tarjeta */
+}
+
+.card-content-bottom .price {
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--secondary-600); /* Azul Petróleo */
+  padding-left: 5px;
+  margin-bottom: 5px;
+  text-align: left; /* Alineado Izquierda */
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-shop {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--secondary-600);
+  color: var(--neutrals-50);
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-shop:hover {
+  background-color: var(--secondary-500);
+}
+
+/* Cinta Oferta */
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  z-index: 10;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 180px;
+  padding: 5px 0;
+  background-color: var(--secondary-600);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: var(--primary-500);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  left: -40px;
+  top: 25px;
+  transform: rotate(-45deg);
+}
+
+/* =========================================
+   5. FOOTER
+   ========================================= */
+.main-footer {
+  background-color: var(--primary-800);
+  padding: 3rem 0 4rem 0;
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-start;
+}
+
+.col-logo {
+  display: flex;
+  padding-left: 20px;
+}
+.footer-icon-large {
+  font-size: 4rem;
+  color: var(--primary-500);
+  opacity: 0.9;
+}
+
+.col-contact {
+  text-align: center;
+}
+.col-contact h4,
+.col-legal h4 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-icons a i {
+  font-size: 2.2rem;
+}
+
+.fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-facebook-f {
+  color: #1877f2;
+}
+.fa-whatsapp {
+  color: #25d366;
+}
+
+.col-legal {
+  text-align: right;
+  padding-right: 20px;
+}
+.col-legal ul li {
+  margin-bottom: 0.6rem;
+}
+.col-legal ul li a {
+  color: var(--neutrals-200);
+  font-weight: 300;
+}
+.col-legal ul li a:hover {
+  color: var(--neutrals-50);
+  text-decoration: underline;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* =========================================
+   6. ESTILOS PÁGINA VISTA (vista.html)
+   ========================================= */
+
+.view-section {
+  background-color: var(--secondary-900); /* Fondo oscuro */
+  padding: 3rem 0 5rem 0;
+  min-height: 80vh;
+}
+
+/* Botón Volver */
+.back-button-container {
+  margin-bottom: 2rem;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--primary-500); /* Dorado */
+  color: var(--secondary-900); /* Texto oscuro */
+  padding: 10px 40px;
+  border-radius: 50px; /* Forma de píldora */
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background-color: var(--primary-400); /* Un poco más claro al hover */
+}
+
+/* Grid Principal (Imagen - Texto) */
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 4rem;
+  align-items: center; /* Centrado vertical */
+}
+
+/* Columna Imagen */
+.detail-image {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 550px; /* Tamaño grande controlado */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+}
+
+/* Columna Texto */
+.detail-info {
+  text-align: center; /* Centrado como en la imagen */
+  color: var(--neutrals-50);
+}
+
+.detail-title {
+  font-family: var(--h1-font); /* Roboto Bold */
+  font-weight: 800;
+  font-size: 4rem; /* Tamaño muy grande */
+  line-height: 1.1;
+  margin-bottom: 4rem; /* Separación con el texto */
+  color: #ffffff;
+}
+
+.detail-description {
+  font-family: var(--body-font);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px; /* Para que el texto no se estire demasiado */
+  margin: 0 auto; /* Centrar el bloque de texto */
+  font-weight: 500;
+}
+
+/* Responsive para móvil */
+@media (max-width: 900px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .detail-title {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
